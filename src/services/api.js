@@ -1,17 +1,14 @@
 import axios from 'axios'
 import { useAuthStore } from '@/stores/auth'
 
-// const baseURL = import.meta.env.VITE_API_URL
-//   ? import.meta.env.VITE_API_URL
-//   : (location.hostname !== 'toko.yaumi.my.id'
-//       ? 'http://yaumi.local:8182'
-//       : 'https://api.yaumi.my.id')
-const baseURL = (location.hostname === 'toko.yaumi.my.id'
-      ?'https://api.yaumi.my.id'
-      : location.hostname === 'localhost'
-        ? 'http://localhost:8182'
-        : 'http://yaumi.local:8182'
-      )
+const baseURL = import.meta.env.VITE_API_URL
+  
+// const baseURL = (location.hostname === 'toko.yaumi.my.id'
+//       ?'https://api.yaumi.my.id'
+//       : location.hostname === 'localhost'
+//         ? 'http://localhost:8182'
+//         : 'http://yaumi.local:8182'
+//       )
 
 // Create axios instance
 const api = axios.create({
