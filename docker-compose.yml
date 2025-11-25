@@ -7,4 +7,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8181:80"
-    restart: unless-stopped
+    networks:
+      - yaumi_shared
+      - default
+    restart: always
+
+networks:
+  default:
+  yaumi_shared:
+    external: true
