@@ -9,8 +9,8 @@
       class="p-1 w-full print:w-full"
       style="padding: 5px 0px !important; font-family: sans-serif"
     >
-      <!-- Store Info (Padded) -->
-      <div class="text-center mb-[5px]" style="padding: 0 15px !important">
+      <!-- Store Info (Full Width) -->
+      <div class="text-center mb-[5px]">
         <div class="font-bold center bold" style="font-size: 12px !important">
           {{ bio?.item?.name || 'NAMA TOKO' }}
         </div>
@@ -24,32 +24,32 @@
 
       <hr class="border-dashed border-black my-1 mx-1" />
 
-      <!-- Transaction Info (Padded) -->
-      <div class="mb-[8px]" style="padding: 0 15px !important; font-size: 12px !important">
+      <!-- Transaction Info (Left Padded) -->
+      <div class="mb-[8px]" style="padding: 0 15px 0 35px !important; font-size: 12px !important">
         <div class="flex justify-between">
           <div>{{ data?.unique_code }}</div>
           <div>{{ data?.cashier?.name || data?.cashier_name }}</div>
         </div>
         <div class="flex justify-between">
           <div>{{ data?.customer?.category || '-' }}</div>
-          <div>{{ data?.customer_name }}</div>
+          <div>{{ data?.customer?.name || data?.customer_name }}</div>
         </div>
       </div>
 
       <hr class="border-dashed border-black my-1 mx-1" />
 
-      <!-- New Header (Padded) -->
+      <!-- New Header (Left Padded) -->
       <div
         class="flex justify-between font-bold mb-1"
-        style="padding: 0 15px !important; font-size: 12px !important"
+        style="padding: 0 15px 0 35px !important; font-size: 12px !important"
       >
         <div>DETAILS</div>
         <div>HARGA</div>
       </div>
       <hr class="border-dashed border-black my-1 mx-1" />
 
-      <!-- Items (Padded) -->
-      <div style="padding: 0 15px !important; font-size: 12px !important">
+      <!-- Items (Left Padded) -->
+      <div style="padding: 0 15px 0 35px !important; font-size: 12px !important">
         <div v-for="(item, index) in data?.items" :key="index" class="">
           <div class="flex-1">
             <div>{{ item?.product?.name }}</div>
@@ -63,8 +63,8 @@
 
       <hr class="border-dashed border-black my-1 mx-1" />
 
-      <!-- Totals (Padded) -->
-      <div class="pt-2" style="padding: 0 15px !important; font-size: 12px !important">
+      <!-- Totals (Left Padded) -->
+      <div class="pt-2" style="padding: 0 15px 0 35px !important; font-size: 12px !important">
         <div class="flex justify-between">
           <div class="">TOTAL HARGA</div>
           <div class="">{{ formatRupiah(data?.total) }}</div>
@@ -93,10 +93,10 @@
 
       <hr class="border-dashed border-black my-1 mx-1" />
 
-      <!-- Item Count (Padded) -->
+      <!-- Item Count (Left Padded) -->
       <div
         class="flex justify-between"
-        style="padding: 0 15px !important; font-size: 12px !important"
+        style="padding: 0 15px 0 35px !important; font-size: 12px !important"
       >
         <div>{{ data?.items?.length }} Item</div>
         <div>{{ formatDateIndo(data?.created_at) }} {{ formatTimeIndo(data?.created_at) }}</div>
@@ -104,10 +104,10 @@
 
       <hr class="border-dashed border-black my-1 mx-1" />
 
-      <!-- Footer (Padded) -->
+      <!-- Footer (Left Padded) -->
       <div
         class="text-center mt-[10px]"
-        style="padding: 0 15px !important; font-size: 12px !important"
+        style="padding: 0 15px 0 35px !important; font-size: 12px !important"
       >
         <div class="center">~ Terima Kasih ~</div>
         <div class="center">Barang yang sudah dibeli</div>
